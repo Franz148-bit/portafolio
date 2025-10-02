@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*.img1{
+    position: static;
+    width: 120px;
+}
+.img2{
+    position: relative;
+    top: 20px;
+    left: 40px;
+    width: 120px;
+}
+.img3{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 120px;
+}
+.img4{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
+}
+.img5{
+    position: sticky;
+    top: 0px;
+    width: 120px;
+}
+*/
+/*
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: gray;
+    padding: 10px 20px;
+    padding-left: 20px;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.menu a{
+    text-decoration: none;
+    color: beige;
+}
+=============================
+Navbar 2
+=============================
+*/
+
+body {
+    font-family: "Oswald", sans-serif;
+    background-color: gray;
+    color: rgb(239, 239, 239);
+    line-height: 1.3;
+}
+ 
+.container{
+    max-width: 900px;
+    margin: 20px auto;
+}
+ 
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(76, 76, 76);
+    padding: 10px ,20px;
+    border-radius: 40px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid rgb(0,0,0);
+    border-radius: 50%;
+}
+ 
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+ 
+.menu a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.btn{
+    background: green;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.menu-hamburguesa{
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+
+}
+
+/* Area Responsive */ 
+
+@media(max-width: 780px){
+    nav ul{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        padding: 10px;
+    }
+    nav ul.show{
+        display: flex;
+    }
+
+    .menu-hamburguesa{
+        display: block;
+        float: right;
+    }
+
+    nav .logo{
+        float: none;
+        display: inline-block;
+    }
+} 
+
+/* Presentacion del Medio Proyectos realizados*/ 
+.proyectos{
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.proyectos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 
+        -1.5px -1.5px 0 black,  
+         1.5px -1.5px 0 black,
+        -1.5px  1.5px 0 black,
+         1.5px  1.5px 0 black;
+}
+
+.proyectos .descripcion{
+    margin-bottom: 26px;;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.contenedor-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+.card img {
+    width: 100%;      
+    height: 160px;     
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(224, 222, 222, 0.714);
+    color: black;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 18px;
+    min-height: 160px;
+    transition: transform 0.25s ease, box-shadow 0.25 ease;
+}
+.card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 18px 30px rgba(255, 255, 255, 0.55);
+}
+.card h3{
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+}
+.card p{
+    line-height: 1.45;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+/* Nuestro Servicios */ 
+
+.contenedor-servi {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedor-servi h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+        text-shadow: 
+        -1.5px -1.5px 0 black,  
+         1.5px -1.5px 0 black,
+        -1.5px  1.5px 0 black,
+         1.5px  1.5px 0 black;
+}
+.servicio {
+    background: rgba(224, 222, 222, 0.714);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px; 
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.servicio h3 {
+    margin-bottom: 10px;
+    color: black;
+}
+.servicio p {
+    color: black;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Parte de abajo */
+
+footer{
+    background: rgba(76, 76, 76);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px 20px 20px;
+    position: relative;
+    z-index: 1;
+}
+.contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-contacto .footer-nav{
+    flex: 1;
+    min-width: 250x;
+}
+.footer-contacto h3, .footer-nav h3{
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+.footer-nav ul{
+    list-style: none;
+    padding: 0;
+}
+.footer-nav li{
+    margin-bottom: 8px;
+}
+.footer-nav a{
+    text-decoration: none;
+    color: goldenrod;
+    transition: color 0.3s ease;
+}
+.footer-nav:hover{
+    color: rgb(0, 0, 0);
+}
+.footer-copy{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.87rem;
+}
